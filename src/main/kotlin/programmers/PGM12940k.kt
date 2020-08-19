@@ -24,6 +24,6 @@ class PGM12940k {
         println("gcd $b")
         println("lcm ${n * m / b}")
 
-        return intArrayOf(b, (a * b / b))
+        return intArrayOf(b, (n * m / b))
     }
 }
