@@ -5,5 +5,7 @@ package Sample
  * */
 fun main(args: Array<String>) {
     //FibonacciSample().main(args)
-    FactorialSample().main(args)
+    //FactorialSample().main(args)
+    //ConvertSample().main(args)
+    GCDSample().main(args)
 }
