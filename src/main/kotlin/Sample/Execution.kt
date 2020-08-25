@@ -8,5 +8,6 @@ fun main(args: Array<String>) {
     //FactorialSample().main(args)
     //ConvertSample().main(args)
     //GCDSample().main(args)
-    InfixToPostfix().main(args)
+    //InfixToPostfix().main(args)
+    ToPostfixSample().main(args)
 }
