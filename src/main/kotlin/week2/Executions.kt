@@ -13,5 +13,8 @@ fun main(args: Array<String>) {
     //IntersectionOfArray().main(args)
     //MoveZeroes().main(args)
     //TwoSum().main(args)
-    LongestCommonPrefix().main(args)
+    //LongestCommonPrefix().main(args)
+    //RotateImage().main(args)
+    //StringToInteger().main(args)
+    ValidSudoku().main(args)
 }
