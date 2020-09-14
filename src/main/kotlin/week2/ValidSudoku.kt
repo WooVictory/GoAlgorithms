@@ -26,28 +26,21 @@ class ValidSudoku {
 
         for (i in 0 until len step 3) {
             for (j in 0 until len step 3) {
-                if (!checkBox(i, j, board)) {
-                    return false
-                }
+                if (!checkBox(i, j, board)) return false
             }
         }
 
         for (i in 0 until len) {
-            if (!checkRow(i, 0, board)) {
-                return false
-            }
+            if (!checkRow(i, board)) return false
         }
 
         for (j in 0 until len) {
-            if (!checkCol(0, j, board)) {
-                return false
-            }
+            if (!checkCol(j, board)) return false
         }
 
         return true
     }
 
-    // 오케이!
     private fun checkBox(r: Int, c: Int, board: Array<CharArray>): Boolean {
         val visited = BooleanArray(10)
         for (i in r..r + 2) {
@@ -66,7 +59,7 @@ class ValidSudoku {
         return true
     }
 
-    private fun checkRow(r: Int, c: Int, board: Array<CharArray>): Boolean {
+    private fun checkRow(r: Int, board: Array<CharArray>): Boolean {
         val visited = BooleanArray(10)
         //print("$r 행 = ")
         for (i in 0 until len) {
@@ -81,7 +74,7 @@ class ValidSudoku {
         return true
     }
 
-    private fun checkCol(r: Int, c: Int, board: Array<CharArray>): Boolean {
+    private fun checkCol(c: Int, board: Array<CharArray>): Boolean {
         val visited = BooleanArray(10)
         //print("$c 열 = ")
         for (i in 0 until len) {
