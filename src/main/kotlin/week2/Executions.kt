@@ -16,5 +16,6 @@ fun main(args: Array<String>) {
     //LongestCommonPrefix().main(args)
     //RotateImage().main(args)
     //StringToInteger().main(args)
-    ValidSudoku().main(args)
+    //ValidSudoku().main(args)
+    CountAndSay().main(args)
 }
