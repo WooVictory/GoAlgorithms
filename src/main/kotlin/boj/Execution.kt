@@ -5,5 +5,6 @@ package boj
  * */
 fun main(args: Array<String>) {
     //BOJ6966().main(args)
-    BOJ10988().main(args)
+    //BOJ10988().main(args)
+    BOJ2667k().main(args)
 }
