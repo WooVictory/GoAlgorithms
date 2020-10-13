@@ -2,6 +2,7 @@ package week6.GroupAnagrams;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -13,7 +14,31 @@ public class woo {
         groupAnagrams(new String[]{"a"});
     }
 
+    // 두 번째 접근 방법.
+    // HashMap 사용.
     public static List<List<String>> groupAnagrams(String[] strs) {
+        HashMap<String, List<String>> map = new HashMap<>();
+
+        for (String s : strs) {
+            char[] ch = s.toCharArray();
+            Arrays.sort(ch);
+            String key = String.valueOf(ch);
+
+            if (map.containsKey(key)) {
+                map.get(key).add(s);
+            } else {
+                List<String> list = new ArrayList<>();
+                list.add(s);
+                map.put(key, list);
+            }
+        }
+        System.out.println(map);
+        return new ArrayList<>(map.values());
+    }
+
+    // 첫 번째 접근 방법
+    // 비효율적..
+    /*public static List<List<String>> groupAnagrams(String[] strs) {
         List<List<String>> result = new ArrayList<>();
         ArrayList<word> words = new ArrayList<>();
 
@@ -71,5 +96,5 @@ public class woo {
                     ", index=" + index +
                     '}';
         }
-    }
+    }*/
 }
