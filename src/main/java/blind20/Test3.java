@@ -63,7 +63,7 @@ public class Test3 {
             Node thisNode = this.front;
             for (int i = 0; i < word.length(); i++) {
                 thisNode.increaseCount();
-                //thisNode = thisNode.getChildNodes().computeIfAbsent(word.charAt(i), c -> new Node());
+                //thisNode = thisNode.getChildNodes().computeIfAbsent(word.charAt(i), c -> new word());
                 if (thisNode.getChildNodes().containsKey(word.charAt(i))) {
                     thisNode = thisNode.getChildNodes().get(word.charAt(i));
                 } else {

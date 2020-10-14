@@ -7,6 +7,7 @@ class PGM12904 {
     fun main(args: Array<String>) {
         println(solution("abcdcba"))
         println(solution("abacde"))
+        println(solution("ac"))
     }
 
     fun solution(s: String): Int {

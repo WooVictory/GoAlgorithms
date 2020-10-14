@@ -22,14 +22,14 @@ public class woo {
         return count;
     }
 
-    private static void solve(int step, int top) {
-        if (step >= top) {
-            if (step == top) count++;
+    private static void solve(int step, int peek) {
+        if (step >= peek) {
+            if (step == peek) count++;
             return;
         }
 
-        solve(step + 1, top);
-        solve(step + 2, top);
+        solve(step + 1, peek);
+        solve(step + 2, peek);
     }*/
 
     // 두번째 접근 방법.
