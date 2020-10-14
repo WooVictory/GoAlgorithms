@@ -1,6 +1,4 @@
-# GoAlgorithms
-
-solving algorithms
+# Solving algorithms
 
 
 ### LeetCode
