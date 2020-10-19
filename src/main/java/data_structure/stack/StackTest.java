@@ -6,6 +6,7 @@ package data_structure.stack;
 public class StackTest {
     public static void main(String[] args) {
         ArrayStack stack = new ArrayStack(3);
+        System.out.println(stack.pop());
         stack.push('A');
         stack.push('B');
         stack.push('C');

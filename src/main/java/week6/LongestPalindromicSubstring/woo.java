@@ -5,16 +5,19 @@ package week6.LongestPalindromicSubstring;
  */
 public class woo {
     public static void main(String[] args) {
-        System.out.println("Result : " + longestPalindrome("babad"));
+        /*System.out.println("Result : " + longestPalindrome("babad"));
         System.out.println("Result : " + longestPalindrome("cbbd"));
         System.out.println("Result : " + longestPalindrome("ac"));
         System.out.println("Result : " + longestPalindrome("bb"));
-        System.out.println("Result : " + longestPalindrome("dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"));
+        System.out.println("Result : " + longestPalindrome("dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"));*/
+        String s = "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd";
+        System.out.println(s.length());
+        System.out.println("Result : " + longestPalindrome("abcda"));
     }
 
     // 3번째 접근 방법.
     // dp.
-    public static String longestPalindrome(String s) {
+    /*public static String longestPalindrome(String s) {
         String answer = "";
         char[] ch = s.toCharArray();
         int maxN = 0;
@@ -32,9 +35,14 @@ public class woo {
             }
         }
         return answer;
-    }
+    }*/
 
-/*    public static String longestPalindrome(String s) {
+
+    /*
+    * 두 번째 풀이. java 가 조금 더 빠르다.
+    * 가장 긴 길이부터 보기 때문에 팰린드롬을 찾자마자 바로 리턴한다.
+    * */
+    public static String longestPalindrome(String s) {
         String answer = "";
         int max = 0;
         for (int i = s.length(); i > 0; i--) {
@@ -44,17 +52,18 @@ public class woo {
             while (end < s.length()) {
                 if (isPalindrome(s, start, end)) {
                     String str = s.substring(start, end + 1);
-                    if (max < str.length()) {
+                    return str;
+                    /*if (max < str.length()) {
                         max = str.length();
                         answer = str;
-                    }
+                    }*/
                 }
                 start++;
                 end++;
             }
         }
 
-        return answer;
+        return String.valueOf(s.charAt(0));
     }
 
 
@@ -65,8 +74,9 @@ public class woo {
             if (s.charAt(start + i) != s.charAt(end - i)) return false;
         }
         return true;
-    }*/
+    }
 
+    // 첫 번째 풀이.
     /*public static String longestPalindrome(String s) {
         if (s.length() == 0 || s.length() == 1) return s;
 

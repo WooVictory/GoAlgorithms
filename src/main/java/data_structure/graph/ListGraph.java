@@ -1,6 +1,7 @@
 package data_structure.graph;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 /**
  * created by victory_woo on 2020/10/14
@@ -58,14 +59,32 @@ public class ListGraph {
     }
 
     /*
-    * 그래프 탐색(재귀호출)
-    * */
+     * 그래프 탐색(재귀호출)
+     * */
     public void dfs(int index) {
         visited[index] = true;
         System.out.print(index + " ");
 
         for (int v : listGraph[index]) {
             if (!visited[v]) dfs(v);
+        }
+    }
+
+    public void bfs(int index) {
+        LinkedList<Integer> q = new LinkedList<>();
+        q.add(index);
+        visited[index] = true;
+
+        while (!q.isEmpty()) {
+            int cur = q.remove();
+            System.out.print(cur + " ");
+
+            for (int v : listGraph[cur]) {
+                if (!visited[v]) {
+                    q.add(v);
+                    visited[v] = true;
+                }
+            }
         }
     }
 }
