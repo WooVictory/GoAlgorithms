@@ -1,7 +1,5 @@
 package week8.PopulatingNextRightPointersinEachNode;
 
-import java.util.LinkedList;
-
 /**
  * created by victory_woo on 2020/10/26
  */
@@ -87,13 +85,13 @@ public class woo {
     }*/
 
     /*
-    * 세 번째 접근 방법.
-    * 완전 이진 트리이기 때문에 자식 노드는 무조건 2개가 존재한다. 따라서 root.left를 기준으로 하여 한칸씩 타고 내려가면서 확인을 한다.
-    * 현재 노드의 left, right에 접근하여 cur.left.next = cur.right로 설정해준다.
-    * 그리고 같은 level에 다른 node가 존재한다면 cur.right.next = cur.next.left로 연결해준다.
-    * 위와 같은 과정을 트리의 끝까지 반복하여 준다.
-    * 이대로 root를 반환하면 마지막 level의 노드에 대한 결과만을 담고 있기 때문에 위에서 선언했던 root에 대한 포인터 head를 반환한다.
-    * */
+     * 세 번째 접근 방법.
+     * 완전 이진 트리이기 때문에 자식 노드는 무조건 2개가 존재한다. 따라서 root.left를 기준으로 하여 한칸씩 타고 내려가면서 확인을 한다.
+     * 현재 노드의 left, right에 접근하여 cur.left.next = cur.right로 설정해준다.
+     * 그리고 같은 level에 다른 node가 존재한다면 cur.right.next = cur.next.left로 연결해준다.
+     * 위와 같은 과정을 트리의 끝까지 반복하여 준다.
+     * 이대로 root를 반환하면 마지막 level의 노드에 대한 결과만을 담고 있기 때문에 위에서 선언했던 root에 대한 포인터 head를 반환한다.
+     * */
     public static Node connect(Node root) {
         if (root == null) return null;
 
